@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app = "basicTweet" ng-controller="tweetController as tweet">
 
   <head>
     <meta charset="utf-8">
@@ -9,16 +9,22 @@
 
   <body>
 
-    <form class="message" action="index.html" method="post">
+    <form class="tweet" action="index.html" method="post">
       <!-- Get name -->
       <label for="name">Name: </label>
       <input type="text" name="name"><br />
 
       <!-- Get message -->
-      <label for="message">Message: </label>
-      <textarea name="message" cols="36" rows="4"></textarea>
+      <label for="message">Message: </label><br>
+    <!--  <textarea type="text" minlength=1 maxlength=104 ng-model="basicTweet.tweet" required ></textarea> -->
+      <div>
+        <br><button class="btn" ng-click="tweet.post()">Submit</button>
+      </div>
     </form>
 
+    <p>Tweets here:<br>
+
+    </p>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
