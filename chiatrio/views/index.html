@@ -11,19 +11,18 @@
   <body ng-app = "basicTweet" ng-controller="tweetController as tweet">
 
       <!-- Get name -->
-      <label for="name">Name: </label><br>
-
-
+      <label for="n">Name: </label><br>
+      <input type="text" ng-model=tweet.name></input>
       <!-- Get message -->
-      <label for="message">Message: </label><br>
+      <label for="m">Message: </label><br>
+      <input type="text" ng-model=tweet.message></input>
 
       <div>
         <button class="btn" ng-click="tweet.post()">Submit</button>
       </div>
 
-    <p>Tweets here:<br>
+    <p>Tweets here:<br>  </p>
 
-    </p>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="../app/controllers/mainController.js"></script>
