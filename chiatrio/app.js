@@ -4,9 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var api = require('./routes/api');
-//var authenticate = require('./routes/authenticate');
+
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017');
+
 
 var app = express();
 
